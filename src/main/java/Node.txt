@@ -1,5 +1,5 @@
 
-Java 常用排序算法/程序员必须掌握的 8大排序算法
+Java 常用排序算法/程序员必须掌握的 8大排序算法 优化后
 
 分类：
 
@@ -20,3 +20,23 @@ Java 常用排序算法/程序员必须掌握的 8大排序算法
 平均速度最快：快速排序
 
 不稳定：快速排序，希尔排序，堆排序。
+
+性能测试 http://blog.csdn.net/sunxing007/article/details/9005471
+    Array length: 20000
+    bubbleSort : 766 ms
+    bubbleSortAdvanced : 662 ms
+    bubbleSortAdvanced2 : 647 ms  ---ok
+    selectSort : 252 ms
+    insertSort : 218 ms
+    insertSortAdvanced : 127 ms
+    insertSortAdvanced2 : 191 ms  ---ok
+    binaryTreeSort : 3 ms
+    shellSort : 2 ms
+    shellSortAdvanced : 2 ms
+    shellSortAdvanced2 : 1 ms     ---ok
+    mergeSort : 3 ms
+    quickSort : 1 ms
+    heapSort : 2 ms
+
+
+
