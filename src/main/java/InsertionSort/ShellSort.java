@@ -22,11 +22,10 @@ public class ShellSort extends SuperSort{
        int i,j ,gap;//gap跨度
        for (gap=a.length/2;gap>0;gap/=2){
            for (i=gap;i<a.length;i++){
-               if (a[i]<a[i-gap]){//直接插入
                    for (j=i-gap;j>=0&&a[j]>a[j+gap];j-=gap){
                        Swap(a,j,j+gap);
                    }
-               }
+
            }
        }
 
