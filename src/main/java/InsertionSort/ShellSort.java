@@ -10,24 +10,24 @@ import supersort.SuperSort;
  * 再对全体元素进行一次直接插入排序。因为直接插入排序在元素基本有序的情况下（接近最好情况），
  * 效率是很高的，因此希尔排序在时间效率上比前两种方法有较大提高。
  */
-public class ShellSort extends SuperSort{
+public class ShellSort extends SuperSort {
 
     public static void main(String[] args) {
-        int [] array={49, 38, 65, 97, 26, 13, 27, 49, 55, 4};
+        int[] array = {49, 38, 65, 97, 26, 13, 27, 49, 55, 4};
         shellSort(array);
         show(array);
     }
 
-    public static void shellSort(int[] a){
-       int i,j ,gap;//gap跨度
-       for (gap=a.length/2;gap>0;gap/=2){
-           for (i=gap;i<a.length;i++){
-                   for (j=i-gap;j>=0&&a[j]>a[j+gap];j-=gap){
-                       Swap(a,j,j+gap);
-                   }
+    public static void shellSort(int[] a) {
+        int i, j, gap;//gap跨度
+        for (gap = a.length / 2; gap > 0; gap /= 2) {
+            for (i = gap; i < a.length; i++) {
+                for (j = i - gap; j >= 0 && a[j] > a[j + gap]; j -= gap) {
+                    Swap(a, j, j + gap);
+                }
 
-           }
-       }
+            }
+        }
 
     }
 

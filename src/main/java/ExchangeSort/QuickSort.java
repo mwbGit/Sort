@@ -15,7 +15,7 @@ public class QuickSort extends SuperSort {
     public static void main(String[] args) {
         QuickSort a = new QuickSort();
         int[] array = new int[]{9, 7, 8, 0, 5, 4, 3, 2, 1};
-       a.quick_sort(array, 0, array.length - 1);
+        a.quick_sort(array, 0, array.length - 1);
         show(array);
     }
 
@@ -41,7 +41,6 @@ public class QuickSort extends SuperSort {
             quick_sort(s, i + 1, r);
         }
     }
-
 
 
 }

@@ -15,13 +15,13 @@ public class Test extends SuperSort {
         int i, j, temp, len = a.length;
         int grap;
 
-       for (grap=len/2;grap>0;grap/=2){
-           for (i=grap;i<len;i++){
-               for(j=i-grap;j>=0&&a[j]>a[j+grap];j-=grap){
-                   Swap(a,j,j+grap);
-               }
-           }
-       }
+        for (grap = len / 2; grap > 0; grap /= 2) {
+            for (i = grap; i < len; i++) {
+                for (j = i - grap; j >= 0 && a[j] > a[j + grap]; j -= grap) {
+                    Swap(a, j, j + grap);
+                }
+            }
+        }
     }
 
 
