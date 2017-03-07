@@ -12,20 +12,20 @@ public class SelectSort extends SuperSort {
 
     public static void main(String[] args) {
         int[] array = {11, 2, 222, 4, 55, 2221, 0, 7};
-        SelectSort(array, array.length);
+        selectSort(array, array.length);
         show(array);
     }
 
-    private static void SelectSort(int[] a, int n) {
-        int i, j, nMinIndex;
+    private static void selectSort(int[] array, int n) {
+        int i, j, minIndex;
         for (i = 0; i < n; i++) {
-            nMinIndex = i;
+            minIndex = i;
             for (j = i + 1; j < n; j++) {//无序中遍历
-                if (a[nMinIndex] > a[j]) {//找到最小
-                    nMinIndex = j;
+                if (array[minIndex] > array[j]) {//找到最小
+                    minIndex = j;
                 }
             }
-            Swap(a, i, nMinIndex);
+            Swap(array, i, minIndex);
         }
     }
 }

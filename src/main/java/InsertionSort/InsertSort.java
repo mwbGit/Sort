@@ -14,20 +14,19 @@ import supersort.SuperSort;
 public class InsertSort extends SuperSort {
     public static void main(String[] args) {
         int[] array = {11, 2, 222, 4, 55, 2221, 0, 7};
-        Insertsort(array, array.length);
+        insertSort(array, array.length);
         show(array);
     }
 
-    public static void Insertsort(int[] a, int length) {
+    public static void insertSort(int[] array, int length) {
         int i, j;
         for (i = 1; i < length; i++) {//i之前都是拍好序 循环..i++ 排序
             //    System.out.println("当前要排序的值="+a[i]+"(i="+i+")");
-            for (j = i - 1; j >= 0 && a[j] > a[j + 1]; j--) {//初始基准数为有序最后一位,即j-1(i-1);j与前一个数比较小于则交换位置,循环..j--;
-                Swap(a, j + 1, j);
+            for (j = i - 1; j >= 0 && array[j] > array[j + 1]; j--) {//初始基准数为有序最后一位,即j-1(i-1);j与前一个数比较小于则交换位置,循环..j--;
+                Swap(array, j + 1, j);
                 //      System.out.println("交换后为:");
                 //      Show(a);
             }
         }
     }
-
 }

@@ -13,14 +13,14 @@ import supersort.SuperSort;
 public class BubbleSort extends SuperSort {
     public static void main(String[] args) {
         int[] array = {11, 2, 222, 4, 55, 2221, 0, 7};
-        BubbleSort(array, array.length);
+        bubbleSort(array);
         show(array);
     }
 
-    public static void BubbleSort(int[] array, int len) {
+    public static void bubbleSort(int[] array) {
         int i;//下标
         int k;//前k个元素需要排序 后面已排好
-        int flag = len;//条件控制变量
+        int flag = array.length;//条件控制变量
         while (flag > 0) {
             k = flag;
             flag = 0;//至0

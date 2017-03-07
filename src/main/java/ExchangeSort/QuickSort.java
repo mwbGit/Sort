@@ -13,32 +13,33 @@ import supersort.SuperSort;
  */
 public class QuickSort extends SuperSort {
     public static void main(String[] args) {
-        QuickSort a = new QuickSort();
         int[] array = new int[]{9, 7, 8, 0, 5, 4, 3, 2, 1};
-        a.quick_sort(array, 0, array.length - 1);
+        quickSort(array, 0, array.length - 1);
         show(array);
     }
 
-    void quick_sort(int s[], int l, int r) {
+    public static void quickSort(int array[], int l, int r) {
         if (l < r) {
-            int i = l, j = r, x = s[l];
+            int i = l, j = r, x = array[l];
             while (i < j) {
-                while (i < j && x < s[j]) {
+
+                while (i < j && array[j] > x) {
                     j--;
                 }
                 if (i < j) {
-                    s[i++] = s[j];
+                    array[i++] = array[j];
                 }
-                while ((j > i && x > s[i])) {
+                while (i < j && array[i] < x) {
                     i++;
                 }
-                if ((i < j)) {
-                    s[j--] = s[i];
+                if (i < j) {
+                    array[j--] = array[i];
                 }
             }
-            s[i] = x;
-            quick_sort(s, l, i - 1);
-            quick_sort(s, i + 1, r);
+
+            array[i] = x;
+            quickSort(array, l, i - 1);
+            quickSort(array, i + 1, r);
         }
     }
 

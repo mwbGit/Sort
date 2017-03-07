@@ -18,18 +18,14 @@ public class ShellSort extends SuperSort {
         show(array);
     }
 
-    public static void shellSort(int[] a) {
+    public static void shellSort(int[] array) {
         int i, j, gap;//gap跨度
-        for (gap = a.length / 2; gap > 0; gap /= 2) {
-            for (i = gap; i < a.length; i++) {
-                for (j = i - gap; j >= 0 && a[j] > a[j + gap]; j -= gap) {
-                    Swap(a, j, j + gap);
+        for (gap = array.length / 2; gap > 0; gap /= 2) {
+            for (i = gap; i < array.length; i++) {
+                for (j = i - gap; j >= 0 && array[j] > array[j + gap]; j -= gap) {
+                    Swap(array, j, j + gap);
                 }
-
             }
         }
-
     }
-
-
 }

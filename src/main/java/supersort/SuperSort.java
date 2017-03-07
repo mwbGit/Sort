@@ -11,17 +11,11 @@ public class SuperSort {
         }
     }
 
-    public static void Show(int[] array) {
-        for (int i : array) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-    }
-
     public static void Swap(int array[], int a, int b) {
         if (a == b) {
             return;
         }
+
         int temp;
         temp = array[a];
         array[a] = array[b];
